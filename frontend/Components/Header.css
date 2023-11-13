@@ -1,0 +1,22 @@
+
+  
+  /* Estilo para a barra de navegação */
+ .navbar {
+    background-color: #8b4367;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;   
+ }    
+
+/* Estilo para a barra de pesquisa */
+.search-bar {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    justify-content: center;
+    margin-left: 20%;
+    
+}
+
+
