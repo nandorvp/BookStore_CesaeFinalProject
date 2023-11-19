@@ -1,65 +1,98 @@
-/*.body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(to right, rgb(20,147,220), rgb(133, 63, 231) );
- }*/
- 
- 
- .idform{
-     
-     color: white;
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     background-color: #8b4367;
-     padding: 15px;
-     border-radius: 10px;
- }
- 
- .fieldset{
-     border: 3px solid dodgerblue;
- }
- 
- legend{
-     border: 1px solid rgb(39, 10, 37);
-     padding: 15px;
-     margin-right: 10px ;
-     margin-left: 0px;
-     text-align: center;
-     background-color: rgb(93, 129, 164);
-     border-radius: 8px;
-     
- }
- 
- .inputbox{
-     position: relative;
- }
- 
- .inputuser{
-     border: none;
-     padding: 8px;
-     border-radius: 10px;   
-     outline: none;
-     width: 95%;
-     font-size: 15px;
-     
- }
+* {
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
 
- 
- .reset{
-     background-image: linear-gradient(to right, rgb(20,147,220), rgb(133, 63, 231) );
-     border: none;
-     border-radius: 10px;
-     padding: 10px;
-     width: 49%;
-     
- }
- 
- .submit{
-     background-image: linear-gradient(to right, rgb(20,147,220), rgb(133, 63, 231) );
-     border: none;
-     border-radius: 10px;
-     padding: 10px;
-     width: 49%;
- 
- }
+
+.section {
+    margin: auto;
+    margin-bottom: 500px;
+    height: 500px;
+    padding: 20px;
+}
+
+.radial-gradient {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    color: black;
+    top: 900px;
+    margin-top: 20px;
+    padding: 1em 2em;
+    cursor: pointer;
+    background: #529e46;
+    border-radius: 100px;
+    border-top: 3px solid black;
+    box-shadow: 0 10px 0 #203d1c;
+    transition: box-shadow 0.1s, top 0.1s;
+}
+
+/* -------------------------------------------------------------- */
+
+.modal {
+    width: 900px;
+    min-height: 450px;
+    padding: 1rem 1rem;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px 0 rgba(255, 217, 90, 1);
+    border: 2px solid #C07F00;
+
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .modal {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(2px);
+        background: rgba(169, 143, 173, 0.692);
+    }
+}
+
+
+.container1 {
+    margin: 0 auto;
+    position: relative;
+    perspective: 3500px;
+    z-index: 2;
+}
+
+legend{
+    color: white;
+    font-size: 40px;
+    font-family: Helvetica;
+
+}
+
+.inputbox{
+    color: white;
+    font-size: 20px;
+    font-family: Helvetica;
+}
+
+
+input{
+    width: 100%;
+    height: 47px;
+    background-color: rgba(255, 255, 255, 0.32);
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid transparent;
+    padding: 15px;
+    font-size: 15px;
+    color: #616161;
+    transition: all 0.4s ease;
+}
+
+input:focus{
+    border-color: #ff008869;
+}
