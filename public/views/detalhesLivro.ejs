@@ -1,42 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="/public/css/detalhesLivro.css">
-        <title>Lista de Livros</title>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/public/css/detalhesLivro.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <title>Lista de Livros</title>
+</head>
+
 <body>
-    <header>
-    </header>
-    <main>
+    <div class="radial-gradient"></div>
+
+
+    <div class="modal2">
         <div class="quote">
             <h1>Detalhes do Livro</h1>
         </div>
-        <div class="currently_reading">
-            <div class="img_reading">
-                <img src="https://m.media-amazon.com/images/I/81Bhe7xf71L._SY466_.jpg" alt="Foto 1">
-            </div>
-            <div class="currently_reading_details">
-                <h3><strong>Título: </strong><%= book.title %></h3>
-                <p><strong>Autor: </strong><%= book.author %></p>
-                <p id="sinopse"><strong>Sinopse: </strong><%= book.sinopse %></p>
-                <div class="rating">
-                    <span><img src="/public/assets/imgs/star_checked.png" alt="star_checked"></span>
-                    <span><img src="/public/assets/imgs/star_checked.png" alt="star_checked"></span>
-                    <span><img src="/public/assets/imgs/star_checked.png" alt="star_checked"></span>
-                    <span><img src="/public/assets/imgs/star_checked.png" alt="star_checked"></span>
-                    <span><img src="/public/assets/imgs/star_unchecked.png" alt="star_unchecked"></span>
-                    <span><strong>4.5</strong></span>
-                    <button class="currently_reading_button_review">Adicionar ao Carrinho</button>
+    </div>
+    <section>
+        <div class="modal">
+            <div class="currently_reading">
+                <div class="img_reading">
+                    <img src="https://m.media-amazon.com/images/I/81Bhe7xf71L._SY466_.jpg" alt="Foto 1">
                 </div>
-                <div class="ratings_reviews">
-                    <p>845 ratings</p>
-                    <p>148 reviews</p>
+                <div class="currently_reading_details">
+                    <h3><strong>Título: </strong>
+                        <%= book.title %>
+                    </h3>
+
+                    <hr>
+
+                    <p><strong>Autor: </strong>
+                        <%= book.author %>
+                    </p>
+                    <hr>
+                    <p id="sinopse"><strong>Sinopse: </strong>
+                        <%= book.sinopse %>
+                    </p>
+                    <hr>
+                    <div class="rating">
+                        <span><img src="/public/assets/imgs/star_checked.png" alt="star_checked"></span>
+                        <span><img src="/public/assets/imgs/star_checked.png" alt="star_checked"></span>
+                        <span><img src="/public/assets/imgs/star_checked.png" alt="star_checked"></span>
+                        <span><img src="/public/assets/imgs/star_checked.png" alt="star_checked"></span>
+                        <span><img src="/public/assets/imgs/star_unchecked.png" alt="star_unchecked"></span>
+                        <span><strong>4.5</strong></span>
+                        <button class="currently_reading_button_review">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="ratings_reviews">
+                        <p>845 ratings</p>
+                        <p>148 reviews</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
+    <script src="/public/js/detalhesLivro.js"></script>
 </body>
+
 </html>
