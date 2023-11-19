@@ -5,7 +5,7 @@ const router = express.Router();
 
 
 //Route to add a new Book
-router.post('/', async (request, response) => {
+router.post('/',async (request, response) => {
     try {
         if (
             !request.body.title ||
@@ -36,8 +36,12 @@ router.post('/', async (request, response) => {
 router.get('/', async (request, response) => {
     try {
         const books = await Book.find({});
+
+        const userAuthenticated = request.session ? request.session.userAuthenticated : false;
+        const existingUser = request.session ? request.session.existingUser : null;
+
         // Renderiza a página index.ejs e passa os dados dos livros
-        response.render('index', { books });
+        response.render('index', { books,userAuthenticated, existingUser});
     } catch (error) {
         console.log(error);
         response.status(500).send({ message: error.message });
@@ -60,26 +64,6 @@ router.get('/detalhesLivro/:id', async (request, response) => {
     }
   });
 
-//Route to get Book by name
-router.get('/books/search/:query', async (request, response) => {
-    try {
-      const query = request.params.query;
-  
-      const searchCriteria = {
-        $or: [
-          { title: { $regex: query, $options: 'i' } },
-          { author: { $regex: query, $options: 'i' } },
-        ],
-      };
-  
-      const books = await Book.find(searchCriteria);
-  
-      response.status(200).send({ data: books });
-    } catch (error) {
-      console.log(error);
-      response.status(500).send({ message: error.message });
-    }
-  });
 
 //Route to update a Book
 router.put('/:id', async (request, response) => {

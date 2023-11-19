@@ -1,10 +1,10 @@
 //Lidar com a visualização de um livro específico
 document.addEventListener('DOMContentLoaded', function () {
-    const verMaisButtons = document.querySelectorAll('#verMaisLivro');
+    const verMaisButtons = document.querySelectorAll('.verMaisLivro');
 
-    verMaisButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const bookId = button.getAttribute('data-book-id');
+    verMaisButtons.forEach(a => {
+        a.addEventListener('click', function () {
+            const bookId = a.getAttribute('data-book-id');
             window.location.href = `/books/detalhesLivro/${bookId}`;
         });
     });
