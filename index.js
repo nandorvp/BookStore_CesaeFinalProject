@@ -4,12 +4,18 @@ import mongoose from "mongoose";
 import bookRoutes from './routes/bookRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import cors from 'cors';
+import session from 'express-session';
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+app.use(session({
+    secret: 'token',
+    resave: false,
+    saveUninitialized: false
+}));
 
 app.set('views', './public/views');
 app.set('view engine', 'ejs'); 
