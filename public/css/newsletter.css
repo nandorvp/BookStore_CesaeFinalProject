@@ -12,6 +12,10 @@
     padding: 20px;
 }
 
+header, footer{
+    z-index: -1;
+}
+
 .radial-gradient {
     position: fixed;
     top: 0px;

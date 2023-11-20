@@ -38,18 +38,20 @@ button {
 
 .logo{
     margin-top: 25px;
+    width: 80%;
+    height: auto;
 }
 
 .rodape a{
     text-decoration: none;
     color: white;
+    align-items: center;
 }
 
 .rodape-div{
     display: flex;
-    
-    width:100%;
-    align-items: center;
+    width:90%;
+    margin: auto;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -57,14 +59,14 @@ button {
 .rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
     margin-left: auto;
     margin-right: auto;
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
     height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    
+    border-radius: 20px;   
 }
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     .rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4 {

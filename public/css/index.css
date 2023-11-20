@@ -52,7 +52,7 @@ button {
     z-index: -1;
 }
 
-header{
+header, footer{
     z-index: -1;
 }
 
