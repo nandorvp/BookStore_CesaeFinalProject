@@ -1,285 +1,387 @@
 :root {
-    --darker:#8338e3;
-    --dark: #9a54d9;
-    --light:  #b271cf;
-    --lighter:#c98dc5;
-    --verylighter:#e0a9bb;
+  --darker: #8338e3;
+  --dark: #9a54d9;
+  --light: #b271cf;
+  --lighter: #c98dc5;
+  --verylighter: #e0a9bb;
 }
 
 * {
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    color: var(--verylighter);
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--verylighter);
 }
 
 html {
-    scroll-behavior: smooth;
-  }
-
-body {
-    min-height: 100vh;
-    background: rgb(131,56,227);
-    background: linear-gradient(0deg, rgba(131,56,227,1) 0%, rgba(178,113,207,1) 35%, rgba(224,169,187,1) 100%);    
-    max-width: 100vw; 
-    margin: auto;
+  scroll-behavior: smooth;
 }
 
-/* !!!!!NAVBAR!!!!!!!! */ 
+body {
+  min-height: 100vh;
+  background: #923CB5;
+  background:
+    radial-gradient(at center, #923CB5, #000000);
+  ;
+  max-width: 100vw;
+  margin: auto;
+}
+
+button {
+  color: black;
+  padding: 1em 2em;
+  cursor: pointer;
+  background: #529e46;
+  border-radius: 100px;
+  border-top: 3px solid black;
+  box-shadow: 0 10px 0 #203d1c;
+  transition: box-shadow 0.1s, top 0.1s;
+}
+
+
+/* !!!!!NAVBAR!!!!!!!! */
 
 header {
-    background: rgb(131,56,227);
-    background: linear-gradient(180deg, rgba(131,56,227,1) 0%, rgba(178,113,207,1) 35%, rgba(224,169,187,1) 100%);
-    display: flex;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
+  background: #923CB5;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .navItem {
-    transition: 0.6s;
+  transition: 0.6s;
 }
 
 .navItem:hover {
-    font-size: 20px;
-    transition: 0.3;
+  font-size: 20px;
+  transition: 0.3;
 }
 
 
 button.navItem {
-    background-color: var(--darker);
-    padding: 5px;
-    border-radius: 5px;
-    border: 3px solid var(--light); 
-    font-size: 15px;
-}
-
-button.navItem:hover {
-    background-color: var(--verylighter);
-    border: 3px solid var(--dark); 
-}
-
-button.navItem a:hover {
-    color: var(--dark);
+  padding: 7px;
+  font-size: 15px;
 }
 
 .navScroll {
-    min-height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 24px;
-    flex: 1;
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  flex: 1;
 }
 
 .navMenu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
 }
 
 .navBranding {
-    font-size: 2rem;
-}
-
-._span {
-    background-color: var(--darker);
-    color: var(--darker);
-    margin-right: 5px;
+  font-size: 2rem;
 }
 
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 h1 {
-    color: var(--darker);
+  color: white;
 }
 
-table  {
-    border: 5px solid var(--verylighter);
-    border-collapse: collapse;
-}
-tr {
-    border-bottom: 2px solid var(--verylighter);
+
+.table td {
+  font-weight: normal;
+  font-size: 1em;
+  border-radius: 20px;
 }
 
-table th {
-    color: var(--dark);
-    font-size: 20px;
-    padding: 15px;
-
+.table {
+  text-align: left;
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+  display: table;
+  padding: 0 0 8em 0;
+  border-radius: 20px;
 }
 
-table td {
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    padding: 15px;
+.table td,
+.table th {
+  color: white;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  padding-left: 2%;
+  border-radius: 20px;
 }
 
-.editButton {
-    background-color: var(--darker);
-    padding: 5px;
-    border-radius: 5px;
-    border: 3px solid var(--light); 
-    color: white;
-    transition: 0.6s;
+/* Background-color of the odd rows */
+.table tr:nth-child(odd) {
+  background-color: #3A184A;
+  border-radius: 20px;
 }
 
-.editButton:hover {
-    background-color: var(--verylighter);
-    border: 3px solid var(--dark); 
-    color: var(--dark);
-    font-size: 20px;
+/* Background-color of the even rows */
+.table tr:nth-child(even) {
+  background-color: #30133D;
+  border-radius: 20px;
 }
 
-.deleteButton { 
-    background-color: red;
-    padding: 5px;
-    border-radius: 5px;
-    border: 3px solid var(--light); 
-    color: white;
-    transition: 0.6s;
+.table th {
+  background-color: #200C29;
+  border-radius: 20px;
 }
 
-.deleteButton:hover {
-    background-color: var(--verylighter);
-    border: 3px solid var(--dark); 
-    color: red;
-    font-size: 20px;
+.table td:first-child {
+  color: #FB667A;
+  border-radius: 20px;
 }
+
+
+.table td:hover {
+  background-color: #C07F00;
+  color: black;
+  font-weight: bold;
+  box-shadow: #402B00 -1px 1px, #402B00 -2px 2px, #402B00 -3px 3px, #402B00 -4px 4px, #402B00 -5px 5px, #402B00 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  transition-property: all;
+  transition-timing-function: line;
+  border-radius: 20px;
+}
+
+
+
+.table .editButton {
+  background-color: #529e46;
+  padding: 5px;
+  border-radius: 5px;
+  border: 3px solid #203d1c;
+  color: white;
+  transition: 0.6s;
+  border-radius: 20px;
+}
+
+.table .editButton:hover {
+  border: 3px solid #203d1c;
+  color: var(--dark);
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+.table .deleteButton {
+  background-color: #fc313b;
+  padding: 5px;
+  border-radius: 5px;
+  border: 3px solid #A6000B;
+  color: white;
+  transition: 0.6s;
+  border-radius: 20px;
+}
+
+.table .deleteButton:hover {
+  border: 3px solid #A6000B;
+  color: #FF4851;
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+@media (max-width: 800px) {
+  .table td:nth-child(4),
+  .table th:nth-child(4) { display: none; }
+  }
 
 /*********editarLivroAdmin******************/
 .editForm {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.editForm input {
-
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 
 /**************/
+.container {
+  color: white;
+  width: 80%;
+  margin: 30px auto;
+  margin-bottom: 100px;
+  padding: 1rem 2rem;
+  z-index: -1;
+  border-radius: 50px;
+  box-shadow: 0 10px 15px 0 rgba(255, 217, 90, 1);
+  border: 2px solid #C07F00;
 
-.container form{
-    padding: 30px 0 0 0;
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .container {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
+    background: rgba(169, 143, 173, 0.692);
   }
-  .container form .form-row{
-    display: flex;
-    margin: 32px 0;
+}
+
+.container form {
+  padding: 10px 0 0 0;
+}
+
+.container form .form-row {
+  display: flex;
+  margin: 32px 0;
+}
+
+form .form-row .input-data {
+  width: 100%;
+  height: 40px;
+  margin: 0 20px;
+  margin-top: 20px;
+  position: relative;
+}
+
+form .input-data input {
+  width: 100%;
+  height: 47px;
+  background-color: rgba(255, 255, 255, 0.32);
+  border-radius: 20px;
+  outline: none;
+  border: 2px solid transparent;
+  padding: 15px;
+  font-size: 15px;
+  color: white;
+  transition: all 0.4s ease;
+}
+
+form .input-data input:focus {
+  border-color: #ff008869;
+}
+
+
+form .form-row .textarea {
+  height: 70px;
+}
+
+.input-data input,
+.textarea textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.32);
+  border-radius: 20px;
+  outline: none;
+  border: 2px solid transparent;
+  padding: 15px;
+  font-size: 15px;
+  color: white;
+  transition: all 0.4s ease;
+}
+
+
+.input-data input:focus~label,
+.textarea textarea:focus~label,
+.input-data input:valid~label,
+.textarea textarea:valid~label {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #3498db;
+}
+
+.textarea textarea {
+  resize: none;
+  padding-top: 10px;
+}
+
+.input-data label {
+  position: absolute;
+  pointer-events: none;
+  bottom: 10px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  color: white;
+}
+
+.input-data .underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+
+.input-data .underline:before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #3498db;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.formSelect {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.formSelect select,
+option {
+  font-size: large;
+  border-radius: 12px;
+}
+
+.input-data input:focus~.underline:before,
+.input-data input:valid~.underline:before,
+.textarea textarea:focus~.underline:before,
+.textarea textarea:valid~.underline:before {
+  transform: scale(1);
+}
+
+#button {
+  overflow: hidden;
+  height: 45px !important;
+  width: 25% !important;
+  background: -webkit-linear-gradient(90deg, rgba(129, 170, 203, 1) 27%, rgba(0, 76, 126, 1) 100%);
+  transition: all 0.4s;
+  border-radius: 15px;
+}
+
+@media (max-width: 700px) {
+  .container .text {
+    font-size: 30px;
   }
-  form .form-row .input-data{
-    width: 100%;
-    height: 40px;
-    margin: 0 20px;
-    position: relative;
+
+  .container form {
+    padding: 10px 0 0 0;
   }
-  form .form-row .textarea{
-    height: 70px;
-  }
-  .input-data input,
-  .textarea textarea{
+
+  .container form .form-row {
     display: block;
-    width: 100%;
-    height: 100%;
-    border: none;
-    font-size: 17px;
-    border-bottom: 2px solid rgba(0,0,0, 0.12);
-  }
-  .input-data input:focus ~ label, .textarea textarea:focus ~ label,
-  .input-data input:valid ~ label, .textarea textarea:valid ~ label{
-    transform: translateY(-20px);
-    font-size: 14px;
-    color: #3498db;
-  }
-  .textarea textarea{
-    resize: none;
-    padding-top: 10px;
-  }
-  .input-data label{
-    position: absolute;
-    pointer-events: none;
-    bottom: 10px;
-    font-size: 20px;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    color: white;
-  }
- 
-  .input-data .underline{
-    position: absolute;
-    bottom: 0;
-    height: 2px;
-    width: 100%;
-  }
-  .input-data .underline:before{
-    position: absolute;
-    content: "";
-    height: 2px;
-    width: 100%;
-    background: #3498db;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.3s ease;
-  }
-  .formSelect {
-    display: flex;
-    flex-direction: row-reverse;
   }
 
-  .formSelect select, option {
-    font-size: large;
-    border-radius: 12px;
+  form .form-row .input-data {
+    margin: 35px 0 !important;
   }
 
-  .input-data input:focus ~ .underline:before,
-  .input-data input:valid ~ .underline:before,
-  .textarea textarea:focus ~ .underline:before,
-  .textarea textarea:valid ~ .underline:before{
-    transform: scale(1);
+  .submit-btn .input-data {
+    width: 40% !important;
   }
-  #button{
-    overflow: hidden;
-    height: 45px!important;
-    width: 25%!important;
-    background: -webkit-linear-gradient(90deg, rgba(129,170,203,1) 27%, rgba(0,76,126,1) 100%);
-    transition: all 0.4s;
-    border-radius: 15px;
-  }
-  
-  @media (max-width: 700px) {
-    .container .text{
-      font-size: 30px;
-    }
-    .container form{
-      padding: 10px 0 0 0;
-    }
-    .container form .form-row{
-      display: block;
-    }
-    form .form-row .input-data{
-      margin: 35px 0!important;
-    }
-    .submit-btn .input-data{
-      width: 40%!important;
-    }
-  }
+}
