@@ -3,7 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    background: #923CB5;
+    background:
+      radial-gradient(at center, #923CB5, #000000);;
+}
 .section {
     margin: 0 auto;
     margin-bottom: 500px;
@@ -17,7 +21,7 @@
     left: 0px;
     height: 100%;
     width: 100%;
-    z-index: 0;
+    z-index: -5;
 }
 
 button {
@@ -42,8 +46,10 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width:400px;
-    height: 400px;
+    width:50%;
+    max-width: 400px;
+    height: auto;
+    z-index: -1;
 }
 
 header{
@@ -56,13 +62,13 @@ header{
     width: 80%;
     max-width: 600px;
     margin: 30px auto;
+    margin-bottom: 100px;
     padding: 1rem 2rem;
-    display: flex;
     justify-content: center;
     z-index: -1;
     align-items: center;
     border-radius: 10px;
-    box-shadow: 0 5px 15px 0 rgb(0, 0, 0);
+    box-shadow: 0 10px 15px 0 rgba(255, 217, 90, 1);
     border: 2px solid #C07F00;
 
 }
@@ -70,18 +76,17 @@ header{
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     .titulo {
         -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(5pxx);
-        background: #C07F00, 0.4;
+        backdrop-filter: blur(5px);
+        background: rgba(192,127,0, 0.2);
     }
 }
 
 
 /*-----------------------------------------------------------------*/
 .container {
-    margin: 0 auto;
-    height: 400px;
-    position: relative;
-    perspective: 3500px;
+    width: 100%;
+    max-width: 2000px;
+    height: auto;
     z-index: 2;
 }
 
@@ -99,6 +104,7 @@ header{
 .carousel-slide img {
     width: 100%;
     height: 500px;
+    z-index: 2;
 }
 
 .carousel-button {
@@ -109,7 +115,8 @@ header{
 /* -------------------------------------------------------------- */
 
 .modal {
-    width: 250px;
+    width:80%;
+    max-width: 250px;
     min-height: 450px;
     padding: 1rem 2rem;
     position: absolute;
@@ -211,7 +218,7 @@ h3 {
 .prev {
     color: black;
     position: absolute;
-    top: 1250px;
+    top: 1450px;
     padding: 1em 2em;
     cursor: pointer;
     background: #529e46;
@@ -228,7 +235,7 @@ h3 {
 
 .next:active,
 .prev:active {
-    top: 1250px;
+    top: 1450px;
     box-shadow: 0 1px 0 #203d1c;
 }
 
@@ -323,7 +330,7 @@ h3 {
 .prev2 {
     color: black;
     position: absolute;
-    top: 2250px;
+    top: 2650px;
     padding: 1em 2em;
     cursor: pointer;
     background: #529e46;
@@ -340,7 +347,7 @@ h3 {
 
 .next2:active,
 .prev2:active {
-    top: 2250px;
+    top: 2650px;
     box-shadow: 0 1px 0 #203d1c;
 }
 

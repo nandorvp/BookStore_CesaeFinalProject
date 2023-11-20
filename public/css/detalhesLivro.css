@@ -18,6 +18,7 @@ html {
     background: #000000;
     background:
         radial-gradient(at center, #923CB5, #000000);
+    z-index: -5;
 }
 
 .section {
