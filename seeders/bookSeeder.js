@@ -20,7 +20,7 @@ const booksData = [
         quantity: 75,
         sinopse: "A Roda do Tempo gira e as Eras vêm e vão, deixando apenas lembranças que se desvanecem no tempo. Em um mundo onde a magia existe, mas está morrendo, um jovem chamado Rand al'Thor descobre que pode ser o escolhido para salvar o mundo de uma força maligna que está despertando.",
         sinopseAuthor: "Robert Jordan",
-        image: 'C:/Users/fernando.monteiro_it/Documents/Code/BookStore_Test/frontend/assets/books/rodadotempo.jpg',
+        image: '/public/assets/books/rodadotempo.jpg',
         keywords: ["principal", "promocoes"],
     },
     {
@@ -32,7 +32,7 @@ const booksData = [
         quantity: 90,
         sinopse: "O jovem hobbit Frodo Bolseiro deve partir em uma jornada para destruir o Um Anel, uma arma poderosa criada pelo Senhor Sauron, o Ser Sombrio. Ao longo do caminho, ele é acompanhado por seus amigos Sam, Merry e Pippin, além do mago Gandalf, o Grão-mago.",
         sinopseAuthor: "J.R.R. Tolkien",
-        image: "C:/Users/fernando.monteiro_it/Documents/Code/BookStore_Test/frontend/assets/books/lotrSociedade.jpg",
+        image: "/public/assets/books/lotrSociedade.jpg",
         keywords: ["principal", "newlaunch"],
     },
     {
@@ -44,7 +44,7 @@ const booksData = [
         quantity: 80,
         sinopse: "Uma reimaginação da lenda do Rei Arthur, contada do ponto de vista das mulheres que o cercaram. A história começa com Igraine, a rainha de Cornualha, que é forçada a se casar com Uther Pendragon. Igraine então dá à luz Arthur, que é criado pelo mago Merlin. Quando Arthur cresce, ele se torna rei e se envolve em uma série de aventuras, incluindo a busca pelo Santo Graal.",
         sinopseAuthor: "Marion Zimmer Bradley",
-        image: "C:/Users/fernando.monteiro_it/Documents/Code/BookStore_Test/frontend/assets/books/avalon.jpg",
+        image: "/public/assets/books/avalon.jpg",
         keywords: ["principal", "topcompras"],
     },
     {
@@ -56,7 +56,7 @@ const booksData = [
         quantity: 70,
         sinopse: "A história de Kvothe, um jovem músico e bardo que conta suas próprias histórias em uma taverna. Kvothe cresceu em uma pequena aldeia e foi aprendiz de um mago. Ele então se tornou um membro da Universidade, uma escola mágica. Kvothe é um personagem complexo e carismático, e sua história é cheia de ação, aventura e romance.",
         sinopseAuthor: "Patrick Rothfuss",
-        image: "C:/Users/fernando.monteiro_it/Documents/Code/BookStore_Test/frontend/assets/books/nomedevento.jpg",
+        image: "/public/assets/books/nomedevento.jpg",
         keywords: ["principal", "topcompras"],
     },
     {
@@ -68,7 +68,7 @@ const booksData = [
         quantity: 68,
         sinopse: "A história de Kvothe, um jovem músico e bardo que conta suas próprias histórias em uma taverna. Kvothe cresceu em uma pequena aldeia e foi aprendiz de um mago. Ele então se tornou um membro da Universidade, uma escola mágica. Kvothe é um personagem complexo e carismático, e sua história é cheia de ação, aventura e romance.",
         sinopseAuthor: "Patrick Rothfuss",
-        image: "C:/Users/fernando.monteiro_it/Documents/Code/BookStore_Test/frontend/assets/books/cronicasrei1.jpg",
+        image: "/public/assets/books/cronicasrei1.jpg",
         keywords: ["principal", "topcompras"],
     },
     {
@@ -80,7 +80,7 @@ const booksData = [
         quantity: 60,
         sinopse: "Quatro crianças entram em um guarda-roupa mágico e descobrem o mundo de Nárnia, habitado por criaturas mágicas e governado pelo leão Aslam. Eles se tornam heróis em uma profecia para salvar Nárnia da feiticeira branca.",
         sinopseAuthor: "C.S. Lewis",
-        image: "C:/Users/fernando.monteiro_it/Documents/Code/BookStore_Test/frontend/assets/books/cronicasnarnia.jpg",
+        image: "/public/assets/books/cronicasnarnia.jpg",
         keywords: ["magia", "topcompras"],
     },
     {
@@ -92,7 +92,7 @@ const booksData = [
         quantity: 66,
         sinopse: "Alice cai em um buraco de coelho e entra em um mundo surreal cheio de criaturas estranhas e eventos absurdos. Ela segue o coelho branco e encontra o Chapeleiro Maluco, a Rainha de Copas e outros personagens excêntricos.",
         sinopseAuthor: "Lewis Carroll",
-        image: "imagem9.jpg",
+        image: "/public/assets/books/alicenopais.jpg",
         keywords: ["aventura", "fantasia", "topcompras"],
     },
     {
@@ -104,22 +104,9 @@ const booksData = [
         quantity: 70,
         sinopse: "Em um mundo onde o Lorde Soberano governa com mão de ferro, Vin, uma jovem órfã, descobre que tem habilidades mágicas. Ela se junta a um grupo de rebeldes conhecido como os Nascidos da Bruma para derrubar o regime opressor.",
         sinopseAuthor: "Brandon Sanderson",
-        image: "imagem10.jpg",
+        image: "/public/assets/books/Mistborn.jpg",
         keywords: ["magia", "newlaunch", "fantasia"],
     },
-    {
-        title: "As Brumas de Avalon",
-        author: "Marion Zimmer Bradley",
-        publishYear: 1979,
-        publishingHouse: "Warner Books",
-        price: 30.0,
-        quantity: 80,
-        sinopse: "Uma reimaginação da lenda do Rei Arthur, contada do ponto de vista das mulheres que o cercaram. A história começa com Igraine, a rainha de Cornualha, que é forçada a se casar com Uther Pendragon. Igraine então dá à luz Arthur, que é criado pelo mago Merlin. Quando Arthur cresce, ele se torna rei e se envolve em uma série de aventuras, incluindo a busca pelo Santo Graal.",
-        sinopseAuthor: "Marion Zimmer Bradley",
-        image: "imagem12.jpg",
-        keywords: ["promoção"],
-    },
-
     {
         title: "Crepúsculo",
         author: "Stephenie Meyer",
@@ -129,7 +116,7 @@ const booksData = [
         quantity: 60,
         sinopse: "Bella Swan se muda para Forks, Washington, e se apaixona por Edward Cullen, que é um vampiro. Eles enfrentam desafios devido às diferenças de suas naturezas e ao mundo sobrenatural que os rodeia.",
         sinopseAuthor: "Stephenie Meyer",
-        image: "imagem14.jpg",
+        image: "/public/assets/books/crepusculo.jpg",
         keywords: ["romance", "newlaunch", "amor proibido"],
     },
     {
@@ -141,7 +128,7 @@ const booksData = [
         quantity: 55,
         sinopse: "Em um futuro distante, Paul Atreides, herdeiro da casa Atreides, viaja para o deserto planeta Duna, onde ocorre a extração de uma substância valiosa chamada melange. Paul se torna parte de uma profecia que pode mudar o destino do universo.",
         sinopseAuthor: "Frank Herbert",
-        image: "imagem15.jpg",
+        image: "/public/assets/books/duna.jpg",
         keywords: ["ficção científica", "promocoes", "política"],
     },
     {
@@ -153,7 +140,7 @@ const booksData = [
         quantity: 70,
         sinopse: "Harry Potter retorna a Hogwarts para seu quinto ano e enfrenta desafios, incluindo a formação da Ordem da Fênix para combater o retorno de Lord Voldemort. Harry também descobre mais sobre seu passado.",
         sinopseAuthor: "J.K. Rowling",
-        image: "imagem16.jpg",
+        image: "/public/assets/books/harryordemfenix.jpg",
         keywords: ["magia", "promocoes", "amizade"],
     },
     {
@@ -165,7 +152,7 @@ const booksData = [
         quantity: 65,
         sinopse: "Lyra Belacqua vive em um mundo paralelo onde as almas das pessoas são manifestadas como dæmons, criaturas que a acompanham. Ela parte em uma jornada para o Norte para descobrir o mistério do Pó e enfrenta ameaças sobrenaturais.",
         sinopseAuthor: "Philip Pullman",
-        image: "imagem17.jpg",
+        image: "/public/assets/books/bussoladourada.jpg",
         keywords: ["aventura", "promocoes", "mundo paralelo"],
     },
     {
@@ -177,7 +164,7 @@ const booksData = [
         quantity: 60,
         sinopse: "Arthur Dent é um humano comum que é resgatado da destruição da Terra por Ford Prefect, um pesquisador para o Guia do Mochileiro das Galáxias. Juntos, eles embarcam em uma jornada intergaláctica hilariante.",
         sinopseAuthor: "Douglas Adams",
-        image: "imagem18.jpg",
+        image: "/public/assets/books/mochileirogalaxias.jpg",
         keywords: ["ficção científica", "promocoes", "viagem espacial"],
     },
     {
@@ -189,7 +176,7 @@ const booksData = [
         quantity: 65,
         sinopse: "A história segue Roland Deschain, o último pistoleiro, em uma jornada para a Torre Negra, um lugar misterioso que é o centro de todos os universos. Ele enfrenta obstáculos e inimigos sobrenaturais ao longo do caminho.",
         sinopseAuthor: "Stephen King",
-        image: "imagem19.jpg",
+        image: "/public/assets/books/torrenegra1.jpg",
         keywords: ["mistério", "promocoes", "fantasia"],
     },
     {
@@ -201,7 +188,7 @@ const booksData = [
         quantity: 72,
         sinopse: "Eragon, um jovem fazendeiro, encontra uma pedra azul misteriosa que na verdade é um ovo de dragão. Quando o ovo choca, Eragon se torna o Cavaleiro do Dragão e parte em uma jornada para derrotar o império malévolo.",
         sinopseAuthor: "Christopher Paolini",
-        image: "imagem20.jpg",
+        image: "/public/assets/books/eragon.jpg",
         keywords: ["dragões", "aventura", "amizade"],
     },
 
@@ -214,7 +201,7 @@ const booksData = [
         quantity: 68,
         sinopse: "Geralt de Rívia, o caçador de monstros, embarca em uma série de aventuras em um mundo de fantasia sombrio e cheio de criaturas sobrenaturais. A Espada do Destino é uma coletânea de contos que expandem o universo de Geralt.",
         sinopseAuthor: "Andrzej Sapkowski",
-        image: "imagem21.jpg",
+        image: "/public/assets/books/espadadodestino.jpg",
         keywords: ["aventura", "topcompras", "fantasia"],
     },
     {
@@ -226,7 +213,7 @@ const booksData = [
         quantity: 72,
         sinopse: "Percy Jackson, um semideus, enfrenta desafios mitológicos em sua jornada para evitar uma guerra entre os deuses. Neste livro, ele busca impedir a libertação de Cronos, o Titã.",
         sinopseAuthor: "Rick Riordan",
-        image: "imagem22.jpg",
+        image: "/public/assets/books/maldicaodotita.jpg",
         keywords: ["mitologia", "newlaunch", "heróis"],
     },
     {
@@ -238,7 +225,7 @@ const booksData = [
         quantity: 75,
         sinopse: "Case, um hacker cibernético, é contratado por um empregador misterioso para realizar um trabalho que envolve uma inteligência artificial poderosa. O livro é um marco no gênero cyberpunk.",
         sinopseAuthor: "William Gibson",
-        image: "imagem23.jpg",
+        image: "/public/assets/books/Neuromancer.jpg",
         keywords: ["cyberpunk", "newlaunch", "futuro distópico"],
     },
     {
@@ -250,7 +237,7 @@ const booksData = [
         quantity: 70,
         sinopse: "No futuro distante, a cidade de Diaspar é a última cidade na Terra, cercada por um deserto. Alvin, um jovem curioso, começa a questionar a natureza da cidade e sua própria existência.",
         sinopseAuthor: "Arthur C. Clarke",
-        image: "imagem24.jpg",
+        image: "/public/assets/books/ultimacidade.jpg",
         keywords: ["ficção científica", "newlaunch", "aventura"],
     },
     {
@@ -262,7 +249,7 @@ const booksData = [
         quantity: 65,
         sinopse: "Ender Wiggin, um jovem prodígio estrategista, é treinado para liderar a luta da humanidade contra uma raça alienígena ameaçadora. O Jogo Final é a conclusão da série Ender's Game.",
         sinopseAuthor: "Orson Scott Card",
-        image: "imagem25.jpg",
+        image: "/public/assets/books/fimdejogo.jpg",
         keywords: ["ficção científica", "newlaunch", "alienígenas"],
     },
     {
@@ -274,7 +261,7 @@ const booksData = [
         quantity: 68,
         sinopse: "A história segue Ablon, um anjo renegado que se torna aliado de outros seres sobrenaturais na batalha contra demônios e forças do mal. O livro é uma epopeia épica de fantasia.",
         sinopseAuthor: "Eduardo Spohr",
-        image: "imagem26.jpg",
+        image: "/public/assets/books/batalhaapocalipse.jpg",
         keywords: ["anjos", "newlaunch", "fantasia épica"],
     },
     {
@@ -286,7 +273,7 @@ const booksData = [
         quantity: 70,
         sinopse: "Harry Potter retorna a Hogwarts para seu terceiro ano, onde enfrenta o misterioso assassino Sirius Black e descobre segredos sobre seu passado. Ele também conhece o hipogrifo Bicuço e o professor Remo Lupin.",
         sinopseAuthor: "J.K. Rowling",
-        image: "imagem27.jpg",
+        image: "/public/assets/books/prisioneiroazkaban.jpg",
         keywords: ["magia", "bruxos", "topcompras"],
     },
     {
@@ -298,7 +285,7 @@ const booksData = [
         quantity: 65,
         sinopse: "A história de Pátroclo e Aquiles, heróis da mitologia grega, é recontada em uma narrativa emocionante de amor e guerra. O livro explora a relação profunda entre os dois personagens.",
         sinopseAuthor: "Madeline Miller",
-        image: "imagem30.jpg",
+        image: "/public/assets/books/cancaodeaquiles.jpg",
         keywords: ["mitologia grega", "amor", "topcompras"],
     },
 
@@ -311,7 +298,7 @@ const booksData = [
         quantity: 75,
         sinopse: "O bruxo Geralt de Rívia viaja pelo mundo em busca de trabalho e aventura. Em suas jornadas, ele se depara com monstros, feiticeiras e criaturas mágicas.",
         sinopseAuthor: "Andrzej Sapkowski",
-        image: "imagem31.jpg",
+        image: "/public/assets/books/ultimodesejo.jpg",
         keywords: ["fantasia", "aventura", "topcompras"],
     },
     {
@@ -323,7 +310,7 @@ const booksData = [
         quantity: 80,
         sinopse: "Após os eventos do primeiro livro, Geralt de Rívia continua suas aventuras em um mundo onde humanos, elfos e monstros coexistem. Ele se envolve em uma guerra entre os reinos humanos e os elfos, e deve escolher um lado.",
         sinopseAuthor: "Andrzej Sapkowski",
-        image: "imagem32.jpg",
+        image: "/public/assets/books/sanguedoselfos.jpg",
         keywords: ["fantasia", "aventura", "topcompras"],
     },
     {
@@ -335,7 +322,7 @@ const booksData = [
         quantity: 85,
         sinopse: "Geralt de Rívia é contratado para proteger uma jovem princesa elfa de um grupo de criminosos. No caminho, ele se envolve em uma trama envolvendo a magia negra e uma profecia que pode mudar o destino do mundo.",
         sinopseAuthor: "Andrzej Sapkowski",
-        image: "imagem33.jpg",
+        image: "/public/assets/books/tempodesprezo.jpg",
         keywords: ["fantasia", "aventura", "magia"],
     },
     {
@@ -347,7 +334,7 @@ const booksData = [
         quantity: 90,
         sinopse: "Geralt de Rívia é chamado para investigar uma série de assassinatos em um reino humano. No caminho, ele se depara com uma ameaça sobrenatural que pode destruir o mundo.",
         sinopseAuthor: "Andrzej Sapkowski",
-        image: "imagem34.jpg",
+        image: "/public/assets/books/batismodefogo.jpg",
         keywords: ["fantasia", "aventura", "sobrenatural"],
     },
     {
@@ -359,7 +346,7 @@ const booksData = [
         quantity: 95,
         sinopse: "Geralt de Rívia é chamado para ajudar um grupo de bruxos a defender uma torre de um ataque de monstros. No caminho, ele se envolve em uma trama envolvendo a magia negra e uma profecia que pode mudar o destino do mundo.",
         sinopseAuthor: "Andrzej Sapkowski",
-        image: "imagem35.jpg",
+        image: "/public/assets/books/torreandorinho.jpg",
         keywords: ["fantasia", "promocoes", "magia"],
     },
     {
@@ -371,7 +358,7 @@ const booksData = [
         quantity: 100,
         sinopse: "Geralt de Rívia é chamado para ajudar um grupo de bruxos a defender uma torre de um ataque de monstros. No caminho, ele se envolve em uma trama envolvendo a magia negra e uma profecia que pode mudar o destino do mundo.",
         sinopseAuthor: "Andrzej Sapkowski",
-        image: "imagem35.jpg",
+        image: "/public/assets/books/senhoralago.jpg",
         keywords: ["fantasia", "promocoes", "magia"],
     }
 ];

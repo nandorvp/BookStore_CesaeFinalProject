@@ -48,14 +48,25 @@ router.get('/', async (request, response) => {
     }
 });
 
+
 //Route to get Book by id
 router.get('/detalhesLivro/:id', async (request, response) => {
     try {
       const { id } = request.params;
+      const { existingUser } = request.session;
+
   
       const book = await Book.findById(id);
-  
-      return response.render('detalhesLivro', { book });
+
+
+        
+
+        if(existingUser != undefined && existingUser.role == 'admin') {
+            return response.render('editarLivroAdmin', {book});
+        } else {
+            return response.render('detalhesLivro', { book });
+        }
+
        
     } catch (error) {
       console.log(error);
@@ -66,27 +77,31 @@ router.get('/detalhesLivro/:id', async (request, response) => {
 
 
 //Route to update a Book
-router.put('/:id', async (request, response) => {
+router.post('/:id', async (request, response) => {
     try {
-        if (
-            !request.body.title ||
-            !request.body.author ||
-            !request.body.publishYear
-        ) {
+        const { id } = request.params;
+
+        // Verifica os campos obrigatórios
+        const requiredFields = ['title', 'author', 'publishYear'];
+        const missingFields = requiredFields.filter(field => !request.body[field]);
+
+        if (missingFields.length > 0) {
             return response.status(400).send({
-                message: 'Fill in all required fields: title, author and publish year',
+                message: `Fill in all required fields: ${missingFields.join(', ')}`,
             });
         }
 
-        const { id } = request.params;
+        // Separa a string de keywords em um array
+        const keywords = request.body.keywords.split(',').map(keyword => keyword.trim());
 
-        const result = await Book.findByIdAndUpdate(id, request.body);
+        // Atualiza o livro, incluindo as keywords
+        const result = await Book.findByIdAndUpdate(id, { ...request.body, keywords }, { new: true });
 
         if (!result) {
             return response.status(404).json({ message: 'Book not found' });
         }
 
-        return response.status(200).send({ message: 'Book updated successfully' });
+        return response.status(200).send({ message: 'Book updated successfully', updatedBook: result });
 
     } catch (error) {
         console.log(error);

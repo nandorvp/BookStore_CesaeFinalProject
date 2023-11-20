@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>HomePage</title>
   <link rel="stylesheet" href="/public/css/index.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-  <div class="radial-gradient"></div>
-  <div class="alice"><img src="/public/assets/imgs/alice.png" alt="alice"></div>
+  <!-- <div class="radial-gradient"></div>
+  <div class="alice"><img src="/public/assets/imgs/alice.png" alt="alice"></div> -->
   <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
   <%- include('components/header.ejs') %>  
   <section id="promocoes" class="section">
@@ -43,7 +43,7 @@
           <div class="item <%= String.fromCharCode(97 + index) %>">
             <div class="modal">
               <a class="verMaisLivro" data-book-id="<%= book._id %>"><img
-                  src="https://m.media-amazon.com/images/I/81Bhe7xf71L._SY466_.jpg" alt="<%= book.title %>"></a>
+                  src="/public/assets/books/rodadotempo.jpg" alt="<%= book.title %>"></a>
               <h3>
                 <%= book.title %>
               </h3>
@@ -75,7 +75,7 @@
           <div class="item <%= String.fromCharCode(97 + index) %>">
             <div class="modal">
               <a class="verMaisLivro" data-book-id="<%= book._id %>"><img
-                  src="https://m.media-amazon.com/images/I/81Bhe7xf71L._SY466_.jpg" alt="<%= book.title %>"></a>
+                  src="/public/assets/books/rodadotempo.jpg" alt="<%= book.title %>"></a>
               <h3>
                 <%= book.title %>
               </h3>
