@@ -2,53 +2,147 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Editar Livro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/public/css/admin.css">
+  <title>Editar Livro</title>
 </head>
 
 <body>
+  <header>
+    <nav class="navScroll">
+      <a href="#" class="navBranding"><span class="_span">.</span>Livro com ID: <%= book._id %></a>
+      <ul class="navMenu">
+        <li class="navItem"><a href="/" class="navLink">HomePage</a></li>
+        <li class="navItem"><a href="#aboutMe" class="navLink">Add a Book</a></li>
+        <button class="navItem"><a href="/logout" class="navLink">Logout</a></button>
+      </ul>
+    </nav>
+  </header>
+  <!-- <form action="/books/<%= book._id %>" method="post" class="editForm">
+    <div class="mb-3">
+      <label for="title" class="form-label">Título:</label>
+      <input type="text" class="form-control" id="title" name="title" value="<%= book.title %>">
+    </div>
+    <div class="mb-3">
+      <label for="author" class="form-label">Autor:</label>
+      <input type="text" class="form-control" id="author" name="author" value="<%= book.author %>">
+    </div>
+    <div class="mb-3">
+      <label for="publishYear" class="form-label">Ano de Publicação:</label>
+      <input type="number" class="form-control" id="publishYear" name="publishYear" value="<%= book.publishYear %>">
+    </div>
+    <div class="mb-3">
+      <label for="publishingHouse" class="form-label">Editora:</label>
+      <input type="text" class="form-control" id="publishingHouse" name="publishingHouse"
+        value="<%= book.publishingHouse %>">
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Preço:</label>
+      <input type="number" class="form-control" id="price" name="price" value="<%= book.price %>">
+    </div>
+    <div class="mb-3">
+      <label for="quantity" class="form-label">Quantidade:</label>
+      <input type="number" class="form-control" id="quantity" name="quantity" value="<%= book.quantity %>">
+    </div>
+    <div class="mb-3">
+      <label for="sinopse" class="form-label">Sinopse:</label>
+      <input type="text" class="form-control" id="sinopse" name="sinopse" value="<%= book.sinopse %>">
+    </div>
+    <div class="mb-3">
+      <label for="keywords" class="form-label">Palavras-chave:</label>
+      <input type="text" class="form-control" id="keywords" name="keywords" value="<%= book.keywords.join(', ') %>">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <div id="errorContainer">
+      <% if (typeof error !=='undefined' && error !==null) { %>
+        <p>
+          <%= error %>
+        </p>
+        <% } %>
+    </div>
+  </form> -->
+  <div class="container">
     <form action="/books/<%= book._id %>" method="post">
-        <div class="mb-3">
+      <div class="form-row">
+        <div class="input-data">
           <label for="title" class="form-label">Título:</label>
+          <br>
+          <br>
           <input type="text" class="form-control" id="title" name="title" value="<%= book.title %>">
         </div>
-        <div class="mb-3">
+        <div class="input-data">
           <label for="author" class="form-label">Autor:</label>
+          <br>
+          <br>
           <input type="text" class="form-control" id="author" name="author" value="<%= book.author %>">
         </div>
-        <div class="mb-3">
+      </div>
+      <div class="form-row">
+        <div class="input-data">
           <label for="publishYear" class="form-label">Ano de Publicação:</label>
+          <br>
+          <br>
           <input type="number" class="form-control" id="publishYear" name="publishYear" value="<%= book.publishYear %>">
         </div>
-        <div class="mb-3">
+        <div class="input-data">
           <label for="publishingHouse" class="form-label">Editora:</label>
-          <input type="text" class="form-control" id="publishingHouse" name="publishingHouse" value="<%= book.publishingHouse %>">
+          <br>
+          <br>
+          <input type="text" class="form-control" id="publishingHouse" name="publishingHouse"
+            value="<%= book.publishingHouse %>">
         </div>
-        <div class="mb-3">
+      </div>
+      <div class="form-row">
+        <div class="input-data textarea">
+          <label for="sinopse" class="form-label">Sinopse:</label>
+          <br>
+          <br>
+          <br>
+          <br>
+          <!-- <input type="text" class="form-control" id="sinopse" name="sinopse" value="<%= book.sinopse %>"> -->
+          <textarea rows="8" cols="80" required type="text" id="sinope" name="sinopse"><%= book.sinopse %></textarea>
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="input-data">
           <label for="price" class="form-label">Preço:</label>
+          <br>
+          <br>
           <input type="number" class="form-control" id="price" name="price" value="<%= book.price %>">
         </div>
-        <div class="mb-3">
+        <div class="input-data">
           <label for="quantity" class="form-label">Quantidade:</label>
+          <br>
+          <br>
           <input type="number" class="form-control" id="quantity" name="quantity" value="<%= book.quantity %>">
         </div>
-        <div class="mb-3">
-          <label for="sinopse" class="form-label">Sinopse:</label>
-          <input type="text" class="form-control" id="sinopse" name="sinopse" value="<%= book.sinopse %>">
-        </div>
-        <div class="mb-3">
-            <label for="keywords" class="form-label">Palavras-chave:</label>
-            <input type="text" class="form-control" id="keywords" name="keywords" value="<%= book.keywords.join(', ') %>">
-        </div>          
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <div id="errorContainer">
-          <% if (typeof error !== 'undefined' && error !== null) { %>
-              <p><%= error %></p>
-          <% } %>
       </div>
-      </form>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <div class="form-row">
+        <div class="input-data">
+          <label for="keywords" class="form-label">Palavras-chave:</label>
+          <br>
+          <br>
+          <input type="text" class="form-control" id="keywords" name="keywords" value="<%= book.keywords.join(', ') %>">
+        </div>
+      </div>
+      <div class="form-row" style="margin-top: 50px;">
+        <div class="input-data">
+          <button type="submit" class="editButton" style="font-size: 30px;">Update</button>
+        </div>
+      </div>
+      <br>
+      <br>
+    </form>
+    <div id="errorContainer">
+      <% if (typeof error !=='undefined' && error !==null) { %>
+        <p>
+          <%= error %>
+        </p>
+        <% } %>
+    </div>
+  </div>
 </body>
+
 </html>

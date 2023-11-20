@@ -1,0 +1,283 @@
+:root {
+    --darker:#8338e3;
+    --dark: #9a54d9;
+    --light:  #b271cf;
+    --lighter:#c98dc5;
+    --verylighter:#e0a9bb;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--verylighter);
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    min-height: 100vh;
+    background: rgb(131,56,227);
+    background: linear-gradient(0deg, rgba(131,56,227,1) 0%, rgba(178,113,207,1) 35%, rgba(224,169,187,1) 100%);    
+    max-width: 100vw; 
+    margin: auto;
+}
+
+/* !!!!!NAVBAR!!!!!!!! */ 
+
+header {
+    background: rgb(131,56,227);
+    background: linear-gradient(180deg, rgba(131,56,227,1) 0%, rgba(178,113,207,1) 35%, rgba(224,169,187,1) 100%);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.navItem {
+    transition: 0.6s;
+}
+
+.navItem:hover {
+    font-size: 20px;
+    transition: 0.3;
+}
+
+
+button.navItem {
+    background-color: var(--darker);
+    padding: 5px;
+    border-radius: 5px;
+    border: 3px solid var(--light); 
+    font-size: 15px;
+}
+
+button.navItem:hover {
+    background-color: var(--verylighter);
+    border: 3px solid var(--dark); 
+}
+
+button.navItem a:hover {
+    color: var(--dark);
+}
+
+.navScroll {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    flex: 1;
+}
+
+.navMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.navBranding {
+    font-size: 2rem;
+}
+
+._span {
+    background-color: var(--darker);
+    color: var(--darker);
+    margin-right: 5px;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: var(--darker);
+}
+
+table  {
+    border: 5px solid var(--verylighter);
+    border-collapse: collapse;
+}
+tr {
+    border-bottom: 2px solid var(--verylighter);
+}
+
+table th {
+    color: var(--dark);
+    font-size: 20px;
+    padding: 15px;
+
+}
+
+table td {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+}
+
+.editButton {
+    background-color: var(--darker);
+    padding: 5px;
+    border-radius: 5px;
+    border: 3px solid var(--light); 
+    color: white;
+    transition: 0.6s;
+}
+
+.editButton:hover {
+    background-color: var(--verylighter);
+    border: 3px solid var(--dark); 
+    color: var(--dark);
+    font-size: 20px;
+}
+
+.deleteButton { 
+    background-color: red;
+    padding: 5px;
+    border-radius: 5px;
+    border: 3px solid var(--light); 
+    color: white;
+    transition: 0.6s;
+}
+
+.deleteButton:hover {
+    background-color: var(--verylighter);
+    border: 3px solid var(--dark); 
+    color: red;
+    font-size: 20px;
+}
+
+/*********editarLivroAdmin******************/
+.editForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.editForm input {
+
+}
+
+
+/**************/
+
+.container form{
+    padding: 30px 0 0 0;
+  }
+  .container form .form-row{
+    display: flex;
+    margin: 32px 0;
+  }
+  form .form-row .input-data{
+    width: 100%;
+    height: 40px;
+    margin: 0 20px;
+    position: relative;
+  }
+  form .form-row .textarea{
+    height: 70px;
+  }
+  .input-data input,
+  .textarea textarea{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgba(0,0,0, 0.12);
+  }
+  .input-data input:focus ~ label, .textarea textarea:focus ~ label,
+  .input-data input:valid ~ label, .textarea textarea:valid ~ label{
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #3498db;
+  }
+  .textarea textarea{
+    resize: none;
+    padding-top: 10px;
+  }
+  .input-data label{
+    position: absolute;
+    pointer-events: none;
+    bottom: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+ 
+  .input-data .underline{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+  }
+  .input-data .underline:before{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: #3498db;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+  .formSelect {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .formSelect select, option {
+    font-size: large;
+    border-radius: 12px;
+  }
+
+  .input-data input:focus ~ .underline:before,
+  .input-data input:valid ~ .underline:before,
+  .textarea textarea:focus ~ .underline:before,
+  .textarea textarea:valid ~ .underline:before{
+    transform: scale(1);
+  }
+  #button{
+    overflow: hidden;
+    height: 45px!important;
+    width: 25%!important;
+    background: -webkit-linear-gradient(90deg, rgba(129,170,203,1) 27%, rgba(0,76,126,1) 100%);
+    transition: all 0.4s;
+    border-radius: 15px;
+  }
+  
+  @media (max-width: 700px) {
+    .container .text{
+      font-size: 30px;
+    }
+    .container form{
+      padding: 10px 0 0 0;
+    }
+    .container form .form-row{
+      display: block;
+    }
+    form .form-row .input-data{
+      margin: 35px 0!important;
+    }
+    .submit-btn .input-data{
+      width: 40%!important;
+    }
+  }

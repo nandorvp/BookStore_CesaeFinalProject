@@ -43,7 +43,7 @@
           <div class="item <%= String.fromCharCode(97 + index) %>">
             <div class="modal">
               <a class="verMaisLivro" data-book-id="<%= book._id %>"><img
-                  src="/public/assets/books/rodadotempo.jpg" alt="<%= book.title %>"></a>
+                  src="<%= book.image  %>" alt="<%= book.title %>"></a>
               <h3>
                 <%= book.title %>
               </h3>
@@ -75,7 +75,7 @@
           <div class="item <%= String.fromCharCode(97 + index) %>">
             <div class="modal">
               <a class="verMaisLivro" data-book-id="<%= book._id %>"><img
-                  src="/public/assets/books/rodadotempo.jpg" alt="<%= book.title %>"></a>
+                  src="<%= book.image  %>" alt="<%= book.title %>"></a>
               <h3>
                 <%= book.title %>
               </h3>
