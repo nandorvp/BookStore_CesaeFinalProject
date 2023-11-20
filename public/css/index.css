@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 .section {
     margin: 0 auto;
     margin-bottom: 500px;
@@ -18,6 +17,7 @@
     left: 0px;
     height: 100%;
     width: 100%;
+    z-index: 0;
 }
 
 button {
@@ -45,6 +45,36 @@ button {
     width:400px;
     height: 400px;
 }
+
+header{
+    z-index: -1;
+}
+
+.titulo{
+    text-align: center;
+    color: white;
+    width: 80%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px 0 rgb(0, 0, 0);
+    border: 2px solid #C07F00;
+
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .titulo {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(5pxx);
+        background: #C07F00, 0.4;
+    }
+}
+
 
 /*-----------------------------------------------------------------*/
 .container {
@@ -82,6 +112,7 @@ button {
     width: 250px;
     min-height: 450px;
     padding: 1rem 2rem;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -174,6 +205,7 @@ h3 {
 .h {
     transform: rotateY(315deg) translateZ(366px);
 }
+
 
 .next,
 .prev {
