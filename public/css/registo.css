@@ -37,8 +37,9 @@ header, footer{
     z-index: -5;
 }
 
-.modal {
-    width: 900px;
+.box {
+    width: 80%;
+    max-width: 900px;
     min-height: 450px;
     padding: 1rem 1rem;
     display: flex;
@@ -52,7 +53,7 @@ header, footer{
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    .modal {
+    .box {
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(2px);
         background: rgba(169, 143, 173, 0.692);
@@ -100,7 +101,7 @@ a:hover{
 }
 
 .form-box p a {
-    color: #FF008A;
+    color: #203d1c;
     text-decoration: none;
 }
 
