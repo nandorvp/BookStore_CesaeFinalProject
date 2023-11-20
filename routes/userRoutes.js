@@ -69,6 +69,8 @@ router.post("/login", async (req, res) => {
 
 
             if(existingUser.role == 'admin') {
+                req.session.userAuthenticated = true;
+                req.session.existingUser = existingUser;
                 return res.render('admin', {books, userAuthenticated, existingUser});        
             }
 
@@ -86,6 +88,17 @@ router.post("/login", async (req, res) => {
         console.log(error);
         return res.render("login", { error: "Ocorreu um erro ao fazer login. Por favor, tente novamente mais tarde." });
     }
+});
+
+router.get('/logout', async (req, res) => {
+    // Limpar a sessão para fazer logout
+    req.session.destroy((err) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ error: "Erro ao fazer logout" });
+        }
+        res.redirect('/login'); // Redirecionar para a página de login após logout
+    });
 });
 
 

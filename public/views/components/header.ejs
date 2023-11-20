@@ -30,8 +30,13 @@
                     style="width: 40px; height: 40px;"></a>
         </div>
         <div id="Login">
-            <a href="#"><img src="/public/assets/imgs/mad-hatter.png" alt="login"
+            <% if (typeof userAuthenticated !== undefined && userAuthenticated) { %>
+                <p>Bem-vindo, <%= existingUser.username %></p>
+                <a href="/logout">Logout</a>
+            <% } else { %>
+            <a href="/login"><img src="/public/assets/imgs/mad-hatter.png" alt="login"
                     style="width: 40px; height: 40px;margin-right: 10%;"></a>
+            <% } %>
         </div>
         <!-- dropdown da navbar - menu -->
         <div class="Menu" style="padding-right: 70px;">
