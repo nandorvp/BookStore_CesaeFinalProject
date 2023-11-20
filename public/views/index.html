@@ -4,16 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HomePage</title>
+  <title></title>
   <link rel="stylesheet" href="/public/css/index.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-  <!-- <div class="radial-gradient"></div>
-  <div class="alice"><img src="/public/assets/imgs/alice.png" alt="alice"></div> -->
+  
+  <header><%- include('components/header.ejs') %> </header>
+
+  <div class="radial-gradient"></div>
+  <div class="alice"><img src="/public/assets/imgs/alice.png" alt="alice"></div>
   <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
-  <%- include('components/header.ejs') %>  
+  
+
   <section id="promocoes" class="section">
     <div class="container">
       <div class="carousel">
@@ -36,6 +40,8 @@
 
   <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
 
+  <div class="titulo"><h1>Novos Lançamentos</h1> </div>
+
   <section id="newlaunch" class="section">
     <div class="container1">
       <div class="carousel1">
@@ -43,7 +49,7 @@
           <div class="item <%= String.fromCharCode(97 + index) %>">
             <div class="modal">
               <a class="verMaisLivro" data-book-id="<%= book._id %>"><img
-                  src="<%= book.image  %>" alt="<%= book.title %>"></a>
+                  src="https://m.media-amazon.com/images/I/81Bhe7xf71L._SY466_.jpg" alt="<%= book.title %>"></a>
               <h3>
                 <%= book.title %>
               </h3>
@@ -67,6 +73,7 @@
 
 
   <!------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+  <div class="titulo"><h1>Novos Lançamentos</h1> </div>
 
   <section id="topcompras" class="section">
     <div class="container2">
@@ -75,7 +82,7 @@
           <div class="item <%= String.fromCharCode(97 + index) %>">
             <div class="modal">
               <a class="verMaisLivro" data-book-id="<%= book._id %>"><img
-                  src="<%= book.image  %>" alt="<%= book.title %>"></a>
+                  src="https://m.media-amazon.com/images/I/81Bhe7xf71L._SY466_.jpg" alt="<%= book.title %>"></a>
               <h3>
                 <%= book.title %>
               </h3>
