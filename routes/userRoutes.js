@@ -17,6 +17,21 @@ router.get('/register', async function (req, res) {
     return res.status(234).render('register');
 });
 
+//Rota que redireciona para a página de Admin
+router.get('/admin', async function (req, res) {
+    const flashData = req.session ? req.session.flashData : null;
+    if (req.session) {
+        delete req.session.flashData;
+    }
+    const { existingUser } = req.session;
+    const books = await Book.find({});
+    if(existingUser.role == 'admin') {
+        req.session.userAuthenticated = true;
+        req.session.existingUser = existingUser;
+        return res.render('admin', {existingUser,books, flashData, message: flashData ? flashData.message : null });       
+    }
+});
+
 
 //Rota que lida com o registo de um utilizador
 router.post("/register", async (req, res) => {
@@ -67,11 +82,10 @@ router.post("/login", async (req, res) => {
             const books = await Book.find({});
             const userAuthenticated = true;
 
-
             if(existingUser.role == 'admin') {
                 req.session.userAuthenticated = true;
                 req.session.existingUser = existingUser;
-                return res.render('admin', {books, userAuthenticated, existingUser});        
+                return res.redirect('/admin');        
             }
 
             // Definir a variável userAuthenticated como true e armazenar o username

@@ -5,34 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/public/css/admin.css">
-  <title>Editar Livro</title>
+  <title>Adicionar Livro</title>
 </head>
 
 <body>
   <header>
     <nav class="navScroll">
-      <a href="#" class="navBranding"><span class="_span">.</span>Livro com ID: <%= book._id %></a>
+      <a href="#" class="navBranding"><span class="_span">.</span>Adicionar Um Livro</a>
       <ul class="navMenu">
         <li class="navItem"><a href="/admin" class="navLink">Ver Livros</a></li>
-        <li class="navItem"><a href="/books/addBook" class="navLink">Add a Book</a></li>
+        <li class="navItem"><a href="/books/addBook" class="navLink">Adicionar um Livro</a></li>
         <button class="navItem"><a href="/logout" class="navLink">Logout</a></button>
       </ul>
     </nav>
   </header>
   <div class="container">
-    <form action="/books/<%= book._id %>" method="post">
+    <form action="/books/addBook" method="post">
       <div class="form-row">
         <div class="input-data">
           <label for="title" class="form-label">Título:</label>
           <br>
           <br>
-          <input type="text" class="form-control" id="title" name="title" value="<%= book.title %>">
+          <input type="text" class="form-control" id="title" name="title" required>
         </div>
         <div class="input-data">
           <label for="author" class="form-label">Autor:</label>
           <br>
           <br>
-          <input type="text" class="form-control" id="author" name="author" value="<%= book.author %>">
+          <input type="text" class="form-control" id="author" name="author" required>
         </div>
       </div>
       <div class="form-row">
@@ -40,14 +40,13 @@
           <label for="publishYear" class="form-label">Ano de Publicação:</label>
           <br>
           <br>
-          <input type="number" class="form-control" id="publishYear" name="publishYear" value="<%= book.publishYear %>">
+          <input type="number" class="form-control" id="publishYear" name="publishYear" required>
         </div>
         <div class="input-data">
           <label for="publishingHouse" class="form-label">Editora:</label>
           <br>
           <br>
-          <input type="text" class="form-control" id="publishingHouse" name="publishingHouse"
-            value="<%= book.publishingHouse %>">
+          <input type="text" class="form-control" id="publishingHouse" name="publishingHouse">
         </div>
       </div>
       <div class="form-row">
@@ -57,7 +56,7 @@
           <br>
           <br>
           <br>
-          <textarea rows="8" cols="80" required type="text" id="sinopse" name="sinopse"><%= book.sinopse %></textarea>
+          <textarea rows="8" cols="80" type="text" id="sinopse" name="sinopse"></textarea>
         </div>
       </div>
       <br>
@@ -66,13 +65,13 @@
           <label for="price" class="form-label">Preço:</label>
           <br>
           <br>
-          <input type="number" class="form-control" id="price" name="price" value="<%= book.price %>">
+          <input type="number" class="form-control" id="price" name="price" required>
         </div>
         <div class="input-data">
           <label for="quantity" class="form-label">Quantidade:</label>
           <br>
           <br>
-          <input type="number" class="form-control" id="quantity" name="quantity" value="<%= book.quantity %>">
+          <input type="number" class="form-control" id="quantity" name="quantity" required>
         </div>
       </div>
       <div class="form-row">
@@ -80,12 +79,12 @@
           <label for="keywords" class="form-label">Palavras-chave:</label>
           <br>
           <br>
-          <input type="text" class="form-control" id="keywords" name="keywords" value="<%= book.keywords.join(', ') %>">
+          <input type="text" class="form-control" id="keywords" name="keywords">
         </div>
       </div>
       <div class="form-row" style="margin-top: 50px;">
         <div class="input-data">
-          <button type="submit" class="editButton" style="font-size: 30px;">Update</button>
+          <button type="submit" class="editButton" style="font-size: 30px;">Adicionar</button>
         </div>
       </div>
       <br>

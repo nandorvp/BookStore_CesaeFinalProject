@@ -16,31 +16,31 @@ const bookSchema = mongoose.Schema(
         },
         publishingHouse: {
             type: String,
-            required: true
+            required: false
         },
         price: {
             type: Number,
-            required: true
+            required: false
         },
         quantity: {
             type: Number,
-            required: true
+            required: false
         },
         sinopse: {
             type: String,
-            required: true
+            required: false
         },
         sinopseAuthor: {
             type: String,
-            required: true
+            required: false
         },
         image: {
             type: String,
-            required: true
+            required: false
         },
         keywords: {
             type: Array,
-            required: true
+            required: false
         }
     }
 )
