@@ -30,7 +30,7 @@
                     style="width: 40px; height: 40px;"></a>
         </div>
         <div id="Login">
-            <% if (typeof userAuthenticated !== undefined && userAuthenticated) { %>
+            <% if (userAuthenticated !== undefined && userAuthenticated !== null) { %>
                 <p>Bem-vindo, <%= existingUser.username %></p>
                 <a href="/logout">Logout</a>
             <% } else { %>

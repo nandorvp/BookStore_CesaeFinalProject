@@ -9,12 +9,17 @@ const router = express.Router();
 
 //Rota que redireciona para a página de Login
 router.get('/login', async function (req, res) {
-    return res.status(234).render('login');
+    const userAuthenticated = false;
+    const existingUser = '';
+
+    return res.status(234).render('login', {userAuthenticated,existingUser});
 });
 
 //Rota que redireciona para a página de Registo
 router.get('/register', async function (req, res) {
-    return res.status(234).render('register');
+    const userAuthenticated = false;
+    const existingUser = '';
+    return res.status(234).render('register', {userAuthenticated, existingUser});
 });
 
 //Rota que redireciona para a página de Admin
