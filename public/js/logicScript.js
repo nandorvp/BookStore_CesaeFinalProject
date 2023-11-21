@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', async function (event) {
                     console.log(result.message);
                     setTimeout(() => {
                         window.location.href = "/books";
-                    }, 2000);
+                    }, 1000);
                 } else {
                     // Se o status for 400 (Bad Request), assume que a mensagem de erro é uma string
                     const errorMessage = await response.json();

@@ -37,7 +37,6 @@ router.get('/admin', async function (req, res) {
     }
 });
 
-
 //Rota que lida com o registo de um utilizador
 router.post("/register", async (req, res) => {
     const { username, email, password } = req.body;

@@ -3,7 +3,6 @@ import { Book } from '../models/Book.js';
 
 const router = express.Router();
 
-
 //Route to get add Book view
 router.get('/addBook', async (request, response) => {
     try {
@@ -21,8 +20,6 @@ router.get('/addBook', async (request, response) => {
         return;
     }
 });
-
-
 
 //Route to add a new Book
 router.post('/addBook', async (request, response) => {
@@ -84,12 +81,13 @@ router.get('/', async (request, response) => {
     }
 });
 
-
 //Route to get Book by id
 router.get('/detalhesLivro/:id', async (request, response) => {
     try {
         const { id } = request.params;
         const { existingUser } = request.session;
+        const userAuthenticated = request.session ? request.session.userAuthenticated : false;
+
 
 
         const book = await Book.findById(id);
@@ -97,7 +95,7 @@ router.get('/detalhesLivro/:id', async (request, response) => {
         if (existingUser != undefined && existingUser.role == 'admin') {
             return response.render('editarLivroAdmin', { book, existingUser });
         } else {
-            return response.render('detalhesLivro', { book });
+            return response.render('detalhesLivro', { book,userAuthenticated,existingUser });
         }
 
     } catch (error) {
@@ -106,7 +104,6 @@ router.get('/detalhesLivro/:id', async (request, response) => {
         return;
     }
 });
-
 
 //Route to update a Book
 router.post('/:id', async (request, response) => {

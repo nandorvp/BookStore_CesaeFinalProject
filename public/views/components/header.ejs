@@ -29,6 +29,9 @@
             <a href="#"><img src="/public/assets/imgs/shopping-cart2.png" alt="carrinho de compras"
                     style="width: 40px; height: 40px;"></a>
         </div>
+        <div id="">
+            <a href="/">Homepage</a>
+        </div>
         <div id="Login">
             <% if (userAuthenticated !== undefined && userAuthenticated !== null) { %>
                 <p>Bem-vindo, <%= existingUser.username %></p>
@@ -44,7 +47,7 @@
                 <button class="dropbtn">Menu</button>
             <div class="dropdown-content">
                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Log In</a></li>
+                    <li><a class="dropdown-item" href="/login">Log In</a></li>
                     <li><a class="dropdown-item" href="#">Wishlist</a></li>
                     <li><a class="dropdown-item" href="#">A tua Conta</a></li>
                 </ul>
