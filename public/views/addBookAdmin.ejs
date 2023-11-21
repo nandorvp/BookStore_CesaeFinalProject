@@ -9,16 +9,18 @@
 </head>
 
 <body>
+
   <header>
     <nav class="navScroll">
       <a href="#" class="navBranding"><span class="_span">.</span>Adicionar Um Livro</a>
       <ul class="navMenu">
-        <li class="navItem"><a href="/admin" class="navLink">Ver Livros</a></li>
-        <li class="navItem"><a href="/books/addBook" class="navLink">Adicionar um Livro</a></li>
-        <button class="navItem"><a href="/logout" class="navLink">Logout</a></button>
+        <li><a class="navItem" href="/admin" class="navLink">Ver Livros</a></li>
+        <li><a class="navItem" href="/books/addBook" class="navLink">Adicionar um Livro</a></li>
+        <button class="navItem" href="/logout" class="navLink">Logout </button>
       </ul>
     </nav>
   </header>
+
   <div class="container">
     <form action="/books/addBook" method="post">
       <div class="form-row">
@@ -84,7 +86,7 @@
       </div>
       <div class="form-row" style="margin-top: 50px;">
         <div class="input-data">
-          <button type="submit" class="editButton" style="font-size: 30px;">Adicionar</button>
+          <button type="submit"  style="font-size: 20px;">Adicionar</button>
         </div>
       </div>
       <br>
@@ -96,11 +98,11 @@
           <%= error %>
         </p>
         <% } %>
-        <% if (typeof message !=='undefined' && message!==null) { %>
-          <p>
-            <%= message %>
-          </p>
-          <% } %>
+          <% if (typeof message !=='undefined' && message!==null) { %>
+            <p>
+              <%= message %>
+            </p>
+            <% } %>
     </div>
   </div>
 </body>

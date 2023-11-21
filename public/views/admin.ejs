@@ -38,14 +38,12 @@
           <td><%= book.author %></td>
           <td><%= book.price %>€</td>
           <td><%= book.quantity %></td>
-          <td>
               <form action="/books/detalhesLivro/<%= book._id %>" method="get">
-                <td><a class="verMaisLivro"><button type="submit" class="editButton">Ver/Editar</button></a></td>
+                <td class="editButton" ><a class="verMaisLivro">Ver/Editar</a></td>
               </form>
               <form action="/books/delete/<%= book._id %>" method="post">
-                <td><a class="verMaisLivro"><button type="submit" class="deleteButton">Apagar</button></a></td>
+                <td class="deleteButton"><a class="verMaisLivro">Apagar</a></td>
               </form>
-          </td>
         </tr>
         <% }) %>
       </tbody>
