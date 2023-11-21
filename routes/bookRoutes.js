@@ -168,6 +168,7 @@ router.post('/delete/:id', async (request, response) => {
         if (request.session) {
             request.session.flashData = { showMessage, message };
         }
+        
         response.redirect('/admin');
     } catch (error) {
         console.log(error);
