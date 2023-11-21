@@ -16,7 +16,7 @@
       <ul class="navMenu">
         <li class="navItem"><a href="/" class="navLink">HomePage</a></li>
         <li class="navItem"><a href="/books/addBook" class="navLink">Adicionar um Livro</a></li>
-        <button class="navItem"><a href="/logout" class="navLink">Logout</a></button>
+        <button class="navItemButton"><a href="/logout" class="navLink">Logout</a></button>
       </ul>
     </nav>
   </header>
@@ -39,10 +39,10 @@
           <td><%= book.price %>€</td>
           <td><%= book.quantity %></td>
               <form action="/books/detalhesLivro/<%= book._id %>" method="get">
-                <td class="editButton" ><a class="verMaisLivro">Ver/Editar</a></td>
+                <td class="editButton" ><a class="verMaisLivro"><button class="sbbtn" type="submit">Ver/Editar</button></a></td>
               </form>
               <form action="/books/delete/<%= book._id %>" method="post">
-                <td class="deleteButton"><a class="verMaisLivro">Apagar</a></td>
+                <td class="deleteButton"><a class="verMaisLivro"><button class="ersbtn" type="submit">Apagar</button></a></td>
               </form>
         </tr>
         <% }) %>
