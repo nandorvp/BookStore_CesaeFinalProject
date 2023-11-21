@@ -47,7 +47,7 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     width:50%;
-    max-width: 400px;
+    max-width: 500px;
     height: auto;
     z-index: -1;
 }
@@ -138,6 +138,31 @@ header, footer{
     }
 }
 
+.fundoBunny{
+    opacity: 0.5;
+    background-attachment: local;
+    background-position: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 1450px;
+    left: 400px;
+    width: 600px;
+    height: auto;
+    z-index: -2;
+}
+
+.arvore{
+    opacity: 0.2;
+    background-attachment: local;
+    background-position: right;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 1450px;
+    right: -1800px;
+    width: 1500px;
+    height: auto;
+    z-index: -2;
+}
 
 .container1 {
     margin: 0 auto;
@@ -248,6 +273,32 @@ h3 {
 }
 
 /* -------------------------------------------------------------- */
+
+.fundoSmile{
+    opacity: 0.5;
+    background-attachment: local;
+    background-position: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 2650px;
+    right: -700px;
+    width: 1000px;
+    height: auto;
+    z-index: -2;
+}
+
+.arvore2{
+    opacity: 0.2;
+    background-attachment: local;
+    background-position: right;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 2650px;
+    left: 200px;
+    width: 1500px;
+    height: auto;
+    z-index: -2;
+}
 
 .container2 {
     margin: 0 auto;
@@ -360,3 +411,29 @@ h3 {
 }
 
 /* -------------------------------------------------------------- */
+
+.arvore3{
+    opacity: 0.2;
+    background-attachment: local;
+    background-position: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 4050px;
+    right: -1800px;
+    width: 1500px;
+    height: auto;
+    z-index: -2;
+}
+
+.fundoHatter{
+    opacity: 0.5;
+    background-attachment: local;
+    background-position: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 4050px;
+    left: 350px;
+    width: 600px;
+    height: auto;
+    z-index: -2;
+}
