@@ -3,7 +3,6 @@ import { Book } from '../models/Book.js';
 
 const router = express.Router();
 
-
 //Route to get add Book view
 router.get('/addBook', async (request, response) => {
     try {
@@ -21,8 +20,6 @@ router.get('/addBook', async (request, response) => {
         return;
     }
 });
-
-
 
 //Route to add a new Book
 router.post('/addBook', async (request, response) => {
@@ -84,7 +81,6 @@ router.get('/', async (request, response) => {
     }
 });
 
-
 //Route to get Book by id
 router.get('/detalhesLivro/:id', async (request, response) => {
     try {
@@ -108,7 +104,6 @@ router.get('/detalhesLivro/:id', async (request, response) => {
         return;
     }
 });
-
 
 //Route to update a Book
 router.post('/:id', async (request, response) => {
