@@ -18,7 +18,7 @@ html {
 
 body {
   min-height: 100vh;
-  background: #923CB5;
+  background: #c14bf0;
   background:
     radial-gradient(at center, #923CB5, #000000);
   ;
@@ -26,9 +26,9 @@ body {
   margin: auto;
 }
 
-button {
+.submitButton, .navItemButton {
   color: black;
-  padding: 1em 2em;
+  padding: 0.3em 0.3em;
   cursor: pointer;
   background: #529e46;
   border-radius: 100px;
