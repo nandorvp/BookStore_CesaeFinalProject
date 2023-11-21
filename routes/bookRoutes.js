@@ -90,6 +90,8 @@ router.get('/detalhesLivro/:id', async (request, response) => {
     try {
         const { id } = request.params;
         const { existingUser } = request.session;
+        const userAuthenticated = request.session ? request.session.userAuthenticated : false;
+
 
 
         const book = await Book.findById(id);
@@ -97,7 +99,7 @@ router.get('/detalhesLivro/:id', async (request, response) => {
         if (existingUser != undefined && existingUser.role == 'admin') {
             return response.render('editarLivroAdmin', { book, existingUser });
         } else {
-            return response.render('detalhesLivro', { book });
+            return response.render('detalhesLivro', { book,userAuthenticated,existingUser });
         }
 
     } catch (error) {
