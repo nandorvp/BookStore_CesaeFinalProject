@@ -38,6 +38,19 @@ button {
     transition: box-shadow 0.1s, top 0.1s;
 }
 
+.imgFundo {
+    opacity: 0.5;
+    background-position: bottom right;
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    right: -400px;
+    bottom: -250px;
+    height: auto;
+    z-index: -2;
+}
+
 /* -------------------------------------------------------------- */
 
 .modal {

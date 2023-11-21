@@ -15,7 +15,7 @@
       <ul class="navMenu">
         <li class="navItem"><a href="/admin" class="navLink">Ver Livros</a></li>
         <li class="navItem"><a href="/books/addBook" class="navLink">Add a Book</a></li>
-        <button class="navItem"><a href="/logout" class="navLink">Logout</a></button>
+        <button class="navItemButton"><a href="/logout" class="navLink">Logout</a></button>
       </ul>
     </nav>
   </header>
@@ -85,12 +85,13 @@
       </div>
       <div class="form-row" style="margin-top: 50px;">
         <div class="input-data">
-          <button type="submit" class="editButton" style="font-size: 30px;">Update</button>
+          <button type="submit" class="submitButton" style="font-size: 30px;">Update</button>
         </div>
       </div>
       <br>
       <br>
     </form>
+    
     <div id="errorContainer">
       <% if (typeof error !=='undefined' && error !==null) { %>
         <p>
