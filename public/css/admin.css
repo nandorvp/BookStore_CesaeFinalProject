@@ -188,11 +188,29 @@ h1 {
   border-radius: 20px;
 }
 
+.table .sbbtn {
+  background-color: #529e46;
+  padding: 10px;
+  border: none;
+  color: white;
+  transition: 0.6s;
+  border-radius: 20px;
+}
+
 .table .deleteButton {
   background-color: #fc313b;
   padding: 5px;
   border-radius: 5px;
   border: 3px solid #A6000B;
+  color: white;
+  transition: 0.6s;
+  border-radius: 20px;
+}
+
+.table .ersbtn {
+  background-color: #fc313b;
+  padding: 10px;
+  border: none;
   color: white;
   transition: 0.6s;
   border-radius: 20px;
