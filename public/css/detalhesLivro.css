@@ -25,6 +25,35 @@ header, footer{
     z-index: -5;
 }
 
+.quote {
+    width: 80%;
+    max-width: 600px;
+    margin: 30px auto;
+    margin-bottom: 100px;
+    padding: 1rem 2rem;
+    justify-content: center;
+    z-index: -1;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px 0 rgba(255, 217, 90, 1);
+    border: 2px solid #C07F00;
+
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .quote {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(5px);
+        background: rgba(192, 127, 0, 0.2);
+    }
+}
+
+.quote h1{
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
 .imgFundo img{
     margin: 0;
     opacity: 0.5;

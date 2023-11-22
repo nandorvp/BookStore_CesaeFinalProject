@@ -50,6 +50,20 @@ header, footer{
     z-index: -2;
 }
 
+.imgFundo2 {
+    opacity: 0.5;
+    background-position: bottom right;
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    right: -350px;
+    bottom: -220px;
+    height: auto;
+    z-index: -2;
+}
+
+
 .box {
     width: 80%;
     max-width: 900px;
