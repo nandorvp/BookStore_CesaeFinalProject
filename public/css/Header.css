@@ -81,17 +81,8 @@ button {
   padding: 5px;
 }
 
-#login{
-  width:80%;
-  max-width: 100px;
-  max-height: 100px;
-  padding: 1rem 2rem;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
+#Login{
+  border-radius: 40px;
   box-shadow: 0 5px 15px 0 rgba(255, 217, 90, 1);
   border: 2px solid #C07F00;
 
