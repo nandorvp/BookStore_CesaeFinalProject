@@ -26,13 +26,13 @@
           <label for="title" class="form-label">Título:</label>
           <br>
           <br>
-          <input type="text" class="form-control" id="title" name="title" value="<%= book.title %>">
+          <input type="text" class="form-control" id="title" name="title" value="<%= book.title %>" required>
         </div>
         <div class="input-data">
           <label for="author" class="form-label">Autor:</label>
           <br>
           <br>
-          <input type="text" class="form-control" id="author" name="author" value="<%= book.author %>">
+          <input type="text" class="form-control" id="author" name="author" value="<%= book.author %>" required> 
         </div>
       </div>
       <div class="form-row">
@@ -40,7 +40,7 @@
           <label for="publishYear" class="form-label">Ano de Publicação:</label>
           <br>
           <br>
-          <input type="number" class="form-control" id="publishYear" name="publishYear" value="<%= book.publishYear %>">
+          <input type="number" class="form-control" id="publishYear" name="publishYear" value="<%= book.publishYear %>" required>
         </div>
         <div class="input-data">
           <label for="publishingHouse" class="form-label">Editora:</label>
@@ -72,7 +72,7 @@
           <label for="quantity" class="form-label">Quantidade:</label>
           <br>
           <br>
-          <input type="number" class="form-control" id="quantity" name="quantity" value="<%= book.quantity %>">
+          <input type="number" class="form-control" id="quantity" name="quantity" value="<%= book.quantity %>" required>
         </div>
       </div>
       <div class="form-row">
