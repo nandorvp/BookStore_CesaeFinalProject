@@ -100,7 +100,7 @@ router.post("/login", async (req, res) => {
                 return res.redirect('/');
             }
         } else {
-            return res.render("login", { error: "Senha incorreta. Tente novamente." });
+            return res.render("login", { error: "Password incorreta. Tente novamente." });
         }
     } catch (error) {
         console.log(error);
@@ -115,7 +115,7 @@ router.get('/logout', async (req, res) => {
             console.error(err);
             return res.status(500).json({ error: "Erro ao fazer logout" });
         }
-        res.redirect('/login'); // Redirecionar para a página de login após logout
+        res.redirect('/'); // Redirecionar para a página de login após logout
     });
 });
 
